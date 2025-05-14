@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: url(captura3.png) no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+/* Header */
+header {
+  padding: 15px 0;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  width: 100%;
+}
+
+/* Navegación */
+.menu ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.menu ul li {
+  margin: 10px 15px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 20px;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.menu ul li a:hover {
+  background-color: #ffffff;
+  color: rgb(170, 133, 73);
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Buscador */
+.wrap {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+.search {
+  position: relative;
+}
+
+.searchTerm {
+  display: none;
+  width: 200px;
+  max-width: 80vw;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  display: none;
+  margin-left: 5px;
+  padding: 8px 12px;
+  border: none;
+  background-color:#cda17b;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d284b8;
+}
+
+.search-icon {
+  cursor: pointer;
+  font-size: 25px;
+}
+
+/* Mostrar elementos al activar buscador */
+.search.active .searchTerm,
+.search.active button {
+  display: inline-block;
+}
+
+/* Autocomplete box */
+#autocomplete-box {
+  width: 100%;
+  padding: 10px;
+}
+
+/* Responsive: tablets y móviles */
+@media screen and (max-width: 768px) {
+  .menu ul {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .menu ul li {
+      margin: 10px 0;
+  }
+
+  .wrap {
+      justify-content: center;
+      padding: 10px;
+  }
+
+  .search-icon {
+      font-size: 20px;
+  }
+
+  .searchTerm {
+      width: 100%;
+  }
+
+  button {
+      width: 100%;
+      margin-top: 5px;
+  }
+
+  .search.active .searchTerm,
+  .search.active button {
+      display: block;
+  }
+}
